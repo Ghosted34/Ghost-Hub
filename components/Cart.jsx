@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Link from "next/link";
-
+import axios from "axios";
 import { useCartContext } from "../context/StateContext";
 import { urlFor } from "../lib/client";
 import getStripe from "../lib/getStripe";
@@ -25,10 +25,7 @@ const Cart = () => {
   } = useCartContext();
 
   const handleCheckout = async () => {
-    console.log(1);
     const stripe = await getStripe();
-
-    console.log(2);
 
     try {
       const res = await fetch("/api/stripe", {
@@ -37,19 +34,19 @@ const Cart = () => {
         body: JSON.stringify(cartItems),
       });
 
-      console.log(3);
+      console.log("axios 1");
+      // const res = await axios.post("/api/stripe.js", JSON.stringify(cartItems));
 
       console.log(4);
       console.log(res);
       const data = await res.json();
       console.log(data);
       toast.loading("Redirecting");
-      console.log(5);
-      console.log(cartItems);
+
       stripe.redirectToCheckout({ sessionId: data.id });
-      console.log(6);
+      console.log("toasted");
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     }
   };
 
