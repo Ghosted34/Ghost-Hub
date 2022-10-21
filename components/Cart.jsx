@@ -35,18 +35,18 @@ const Cart = () => {
       });
 
       console.log("axios 1");
-      // const res = await axios.post("/api/stripe.js", JSON.stringify(cartItems));
 
-      console.log(4);
       console.log(res);
+
       const data = await res.json();
+
       console.log(data);
+
       toast.loading("Redirecting");
 
       stripe.redirectToCheckout({ sessionId: data.id });
-      console.log("toasted");
     } catch (error) {
-      console.log(error);
+      toast.error("Well, this didn't work. Please try again in a short while");
     }
   };
 
