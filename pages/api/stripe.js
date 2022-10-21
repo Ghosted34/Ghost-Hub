@@ -1,6 +1,6 @@
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SK);
+const stripe = new Stripe(`${process.env.NEXT_PUBLIC_STRIPE_SK}`);
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
