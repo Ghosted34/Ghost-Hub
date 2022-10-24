@@ -34,6 +34,7 @@ const FooterBanner = ({
             <button type="button">{buttonText}</button>
           </Link>
         </div>
+
         <img
           src={image && urlFor(image)}
           alt={discount}
