@@ -681,6 +681,8 @@ span.text-red {
   }
   .product-detail-container {
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
   .product-detail-container .product-detail-image {
     width: 350px;
