@@ -42,10 +42,8 @@ const Cart = () => {
 
       console.log(data);
 
-     
       stripe.redirectToCheckout({ sessionId: data.id });
       toast.loading("Redirecting");
-
     } catch (error) {
       toast.error("Well, this didn't work. Please try again in a short while");
     }

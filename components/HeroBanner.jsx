@@ -7,7 +7,7 @@ const HeroBanner = ({ hero }) => {
   return (
     <section className="hero-banner-container">
       <div>
-        <div style={{ zIndex: 999, position: "sticky" }}>
+        <div style={{ zIndex: 2, position: "sticky" }}>
           <p className="beats-solo">{hero.smallText}</p>
           <h3>{hero.midText}</h3>
           <h1>{hero.largeText1}</h1>

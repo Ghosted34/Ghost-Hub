@@ -159,7 +159,7 @@ span.text-red {
 }
 .hero-banner-container h1 {
   color: white;
-  font-size: 10em;
+  font-size: 8.5rem;
   margin-left: -20px;
   text-transform: uppercase;
 }
@@ -225,6 +225,7 @@ span.text-red {
 .banner-desc {
   display: flex;
   justify-content: space-between;
+  gap: 70px;
 }
 .banner-desc button {
   border-radius: 15px;
@@ -619,7 +620,7 @@ span.text-red {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
   .hero-banner-container {
     height: 560px;
   }
